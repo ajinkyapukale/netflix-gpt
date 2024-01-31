@@ -4,10 +4,10 @@ import React from 'react';
 import { checkValidData } from '../utils/validate';
 import {  createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../utils/firebase";
-import { useNavigate } from 'react-router-dom';
 import { updateProfile } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { USER_AVTAR } from '../utils/constant';
 
 
 const Login = () => {
@@ -15,7 +15,7 @@ const Login = () => {
   const[isSignInForm, setIsSignInForm] = useState(true);
 
   const[errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate()
+ 
 
   const dispatch = useDispatch();
 
@@ -40,7 +40,7 @@ const message = checkValidData(email.current.value,password.current.value);
     const user = userCredential.user;
 
     updateProfile(user, {
-      displayName: name.current.value, photoURL: "https://miro.medium.com/v2/resize:fit:1280/0*ngAthWxOvKZHvsw9"
+      displayName: name.current.value, photoURL: USER_AVTAR
     }).then(() => {
      
         const{uid, email ,displayName, photoURL }= auth.currentUser;
@@ -54,13 +54,13 @@ const message = checkValidData(email.current.value,password.current.value);
      
       
       // Profile updated!
-      navigate("/browse")
+    
     }).catch((error) => {
     // An error occurred
     setErrorMessage(errorMessage) 
     });
 
-    console.log(user);
+   
     
     // ...
   })
@@ -78,8 +78,8 @@ const message = checkValidData(email.current.value,password.current.value);
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    console.log(user);
-    navigate("/browse")
+  
+  
     // ...
   })
   .catch((error) => {

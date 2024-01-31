@@ -26,7 +26,7 @@
 -Update store with Trailer Video Data
 -Embeded the Youtube Video and Make it Autoplay and Mute
 -Tailwind Classes to make Main Container look awesome
-
+-Build Secondary Component
 
 
 # Feature 
