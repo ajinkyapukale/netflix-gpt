@@ -7,7 +7,7 @@ const useNowPlayingMovies = ()=>{
     
     // Fetch Data from TMDB api and update the store
 
-
+   
     const dispatch = useDispatch();
 
     const getNowPlayingMovies = async ()=>{
