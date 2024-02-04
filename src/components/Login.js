@@ -99,7 +99,7 @@ setIsSignInForm(!isSignInForm)
   return (
     <div>
         <Header />
-        <div className='absolute '>
+        <div className='absolute blur-sm'>
         <img src={BG_URL} alt='background'/>
  </div>
 <div>

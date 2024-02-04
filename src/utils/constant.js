@@ -6,7 +6,7 @@ export const API_OPTIONS = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMzY1YTVjMzgzOTRiNDUwNTQ0NjVhOTQzZjhkZDkwMSIsInN1YiI6IjY1YjE4Njc2ZGQ5MjZhMDEzOTRjZmFmZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.c6r7kFAvRH9JJJOSj7K1vHY8ur-q9PxRLyU0Zs1PqyA'
+      Authorization: 'Bearer  eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMzY1YTVjMzgzOTRiNDUwNTQ0NjVhOTQzZjhkZDkwMSIsInN1YiI6IjY1YjE4Njc2ZGQ5MjZhMDEzOTRjZmFmZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.c6r7kFAvRH9JJJOSj7K1vHY8ur-q9PxRLyU0Zs1PqyA' 
     }
   };
 
@@ -16,3 +16,5 @@ export const API_OPTIONS = {
 
 
   export const SUPPORTED_LANGUAGES = [{identifier:"english", name:"English"},{identifier:"hindi", name:"Hindi"},{identifier:"spanish", name:"Spanish"}];
+
+  export const OPENAI_KEY =  "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"
