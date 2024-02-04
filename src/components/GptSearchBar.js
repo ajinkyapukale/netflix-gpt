@@ -52,9 +52,10 @@ dispatch(addGptMovieResults({ movieNames:gptMovies , movieResults:tmdbResults}))
   
 
   return (
-    <div className='pt-[10%] flex justify-center ' >
+    <div className=' pt-[20%] md:pt-[10%] flex justify-center ' >
         
-<form className=" bg-black w-1/2 grid grid-cols-12" onSubmit = {(e)=>{e.preventDefault()}}>
+<form className=" bg-black grid grid-cols-12 w-[90%] md:w-1/2" 
+onSubmit = {(e)=>{e.preventDefault()}}>
     <input 
     ref={searchText}
     type="text" placeholder={lang[langkey].gptSearchPlaceholder} 

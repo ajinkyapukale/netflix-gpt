@@ -10,12 +10,12 @@ const MainContainer = () => {
   console.log(movies)
     if(movies === null) return ;
 
-    const mainMovie = movies[2];
+    const mainMovie = movies[0];
     
     const {original_title, overview,id} = mainMovie;
 
   return (
-    <div className="w-screen aspect-video h-screen">
+    <div className=" pt-[30%]  bg-black md:p-0">
     <VideoTitle title={original_title} overview= {overview}/>
     <VideoBackground  movieId={id}/>
     </div>

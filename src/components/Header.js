@@ -69,29 +69,29 @@ const handleLanguageChange = (e)=>{
 }
 
   return (
-    <div className='absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex justify-between' >
+    <div className='absolute px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex flex-col md:flex-row md:justify-between ' >
         <img 
-        className='w-44 '
+        className='w-44 mx-auto md:mx-0'
         src={LOGO} alt='logo'/>
 
 
- { user && (<div className='flex'>
+ { user && (<div className='flex justify-around'>
 
   { showGptSearch && (
   <select 
-  className='px-1 m-4 rounded-md bg-gray-300' 
+  className='px-1 m-5 rounded-md bg-gray-300' 
   onChange={handleLanguageChange}>
     {SUPPORTED_LANGUAGES.map(lang =><option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
    
   </select>)}
 
-  <button className='bg-red-500 text-white font-semibold px-3 my-4 mx-4 rounded-md'
+  <button className='bg-gray-300 text-black font-semibold px-3 m-5 rounded-md'
   onClick={handleGptSearchClick}
   >{ showGptSearch? "Homepage":"GPT Search"}</button>
   <img 
-  className='w-14 h-14 mt-2 rounded-xl'
+  className='hidden md:block w-6 h-6 md:w-10 md:h-10 mt-4 md:m-4 rounded-md'
   alt='usericon' src={user.photoURL} />
-  <button  onClick={handleSignOut} className='font-bold text-white'> (Sign Out)</button>
+  <button  onClick={handleSignOut} className='font-bold text-black bg-gray-300 p-1 m-5 md:-ml-2 md:p-0 rounded-md'> (Sign Out)</button>
 </div>)}
 
     </div>

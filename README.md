@@ -37,6 +37,15 @@
 -GPT search page
 -GPT search bar
 -Multi-Language feature in our app
+-GPT Search Open AI Api Key
+-Gpt Search Api call
+-Fetch Gpt movie Suggestions from TMDB
+-Createtd gptSlice added data
+-Reuse Movielist component to make movie suggestion container
+-Memoization
+-Adding .env file to gitignore
+-Made site responsive
+
 
 
 
